@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoBooking"
+             x:Class="DemoBooking.CompleteReservation">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle"
+             TargetType="Label">
+                <Setter Property="XAlign" Value="Start" />
+                <Setter Property="YAlign" Value="Center" />
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="FontAttributes" Value="Italic" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid x:Name="clientGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="Images/restaurant.png" Aspect="AspectFill" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8"/>
+        <BoxView x:Name="wrapperBox"  Opacity="0.5" Color="SlateGray" Grid.Row="0" Grid.RowSpan="7" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" Margin="0, 40, 0 , 0"/>
+
+        <Label Text="Success!" FontSize="Large" FontAttributes="Bold" TextColor="Gainsboro"  HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="10, 0, 10, 0"/>
+        <Label x:Name="reservationDetails" FontSize="Small" TextColor="Gainsboro" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10, 0, 10, 0"/>
+        <Label Text="A representitive will contact with you shortly." FontSize="Small" TextColor="Gainsboro"  HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10, 0, 10, 0"/>
+        <Label Text="Thank you for choosing us!" FontSize="Small" TextColor="Gainsboro"  HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="10, 0, 10, 0"/>
+
+        <!--<Button x:Name="confirmBtn" Text="Book Now" BackgroundColor="#ffe196" TextColor="Black" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="End" FontSize="Medium" Margin="0, 0, 0, 20"/>-->
+        
+        <Label Text="Say something about this app" FontSize="Micro" TextColor="Gainsboro" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="End"/>
+
+        <StackLayout Orientation="Horizontal" HeightRequest="70" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Start">
+            <Grid>
+                <Grid.Behaviors>
+                    <local:StarBehavior x:Name="starOne" GroupName="myStar"/>
+                </Grid.Behaviors>
+                <Image x:Name="starBlankOne"
+                Source="{local:ImageResource DemoBooking.Images.star_outline.png}" />
+
+                <Image x:Name="starSelectedOne"
+                Source="{local:ImageResource DemoBooking.Images.star_selected.png}"
+                IsVisible="{Binding Source={x:Reference starOne},
+                                    Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+                <Grid.Behaviors>
+                    <local:StarBehavior x:Name="starTwo" GroupName="myStar"/>
+                </Grid.Behaviors>
+                <Image x:Name="starBlankTwo"
+                Source="{local:ImageResource DemoBooking.Images.star_outline.png}" />
+
+                <Image x:Name="starSelectedTwo"
+                Source="{local:ImageResource DemoBooking.Images.star_selected.png}"
+                IsVisible="{Binding Source={x:Reference starTwo},
+                                    Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+                <Grid.Behaviors>
+                    <local:StarBehavior x:Name="starThree" GroupName="myStar"/>
+                </Grid.Behaviors>
+                <Image x:Name="starBlankThree"
+                Source="{local:ImageResource DemoBooking.Images.star_outline.png}" />
+
+                <Image x:Name="starSelectedThree"
+                Source="{local:ImageResource DemoBooking.Images.star_selected.png}"
+                IsVisible="{Binding Source={x:Reference starThree},
+                                    Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+                <Grid.Behaviors>
+                    <local:StarBehavior x:Name="starFour" GroupName="myStar"/>
+                </Grid.Behaviors>
+                <Image x:Name="starBlankFour"
+                Source="{local:ImageResource DemoBooking.Images.star_outline.png}" />
+
+                <Image x:Name="starSelectedFour"
+                Source="{local:ImageResource DemoBooking.Images.star_selected.png}"
+                IsVisible="{Binding Source={x:Reference starFour},
+                                    Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+                <Grid.Behaviors>
+                    <local:StarBehavior x:Name="starFive" GroupName="myStar"/>
+                </Grid.Behaviors>
+                <Image x:Name="starBlankFive"
+                Source="{local:ImageResource DemoBooking.Images.star_outline.png}" />
+
+                <Image x:Name="starSelectedFive"
+                Source="{local:ImageResource DemoBooking.Images.star_selected.png}"
+                IsVisible="{Binding Source={x:Reference starFive},
+                                    Path=IsStarred}"/>
+            </Grid>
+        </StackLayout>
+        <StackLayout Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Start">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <local:RatingConverter x:Key="ratingConverter" />
+                    <Style TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                        <Setter Property="TextColor" Value="#dcdcdc" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="{Binding Source={x:Reference starFive},
+                                    Path=Rating, Converter={StaticResource ratingConverter}}" ></Label>
+        </StackLayout>
+    </Grid>
+    
+    
+
+</ContentPage>

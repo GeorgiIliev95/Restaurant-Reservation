@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoBooking"
+             x:Class="DemoBooking.ClientData">
+
+    <Grid x:Name="clientGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="Images/restaurant.png" Aspect="AspectFill" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="7"/>
+        <BoxView x:Name="wrapperBox"  Opacity="0.5" Color="LightGray" Grid.Row="0" Grid.RowSpan="6" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" Margin="0, 40, 0 , 0"/>
+
+        <Label Text="There is a table for you!" FontSize="Medium" TextColor="Gainsboro"  HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"  Grid.Row="0" Grid.ColumnSpan="4"/>
+
+        <Label Text="First Name"  HorizontalOptions="Start" VerticalOptions="End" TextColor="Gainsboro" Grid.Row="1" Grid.Column="1" Margin="10, 0, 0, 0"/>
+        <Entry x:Name="clientFirstName" HorizontalOptions="FillAndExpand"  VerticalOptions="Center" Grid.Row="2" Grid.Column="1" Margin="10, 0, 0, 0">
+            <Entry.Behaviors>
+                <local:NameValidatorBehavior />
+            </Entry.Behaviors>
+        </Entry>
+
+        <Label Text="Last Name"  HorizontalOptions="Start" VerticalOptions="End" TextColor="Gainsboro" Grid.Row="1" Grid.Column="2" />
+        <Entry x:Name="clientLastName" HorizontalOptions="FillAndExpand"  VerticalOptions="Center"  Grid.Row="2" Grid.Column="2" Margin="0, 0, 10, 0">
+            <Entry.Behaviors>
+                <local:NameValidatorBehavior />
+            </Entry.Behaviors>
+        </Entry>
+
+        <Label Text="Email"  HorizontalOptions="Start" VerticalOptions="End" Grid.Row="3" TextColor="Gainsboro" Grid.Column="1" Margin="10, 0, 0, 0"/>
+        <Entry x:Name="clientEmail" Keyboard="Email" HorizontalOptions="FillAndExpand"  VerticalOptions="Center" Grid.Row="4" Grid.Column="1" Margin="10, 0, 0, 0">
+            <Entry.Behaviors>
+                <local:EmailValidatorBehavior />
+            </Entry.Behaviors>
+        </Entry>
+
+        <Label Text="Mobile Number"  HorizontalOptions="Start" VerticalOptions="End" TextColor="Gainsboro" Grid.Row="3" Grid.Column="2" />
+        <Entry x:Name="clientMobile" Keyboard="Telephone" HorizontalOptions="FillAndExpand"  VerticalOptions="Center"  Grid.Row="4" Grid.Column="2" Margin="0, 0, 10, 0">
+            <Entry.Behaviors>
+                <local:PhoneValidatorBehavior />
+            </Entry.Behaviors>
+        </Entry>
+
+        <Button x:Name="confirmBtn" Text="Book Now" BackgroundColor="#ffe196" TextColor="Black" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="End" FontSize="Medium" Margin="0, 0, 0, 20" Clicked="ValidateAndFinish"/>
+
+    </Grid>
+</ContentPage>

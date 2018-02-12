@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f075b2c5-1087-4d89-be8d-1eb1a079ad8e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DemoBooking</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\EmailValidatorBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\NameValidatorBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\PhoneValidatorBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\StarBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClientData.xaml.cs">
+      <DependentUpon>ClientData.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\JsonData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImageResourceExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ReservationRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RestaurantReservations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CompleteReservation.xaml.cs">
+      <DependentUpon>CompleteReservation.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)RatingConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\bg.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\error.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\reservationPage.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\restaurant.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\star_outline.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\star_selected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ClientData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CompleteReservation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

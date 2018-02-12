@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoBooking"
+             x:Class="DemoBooking.MainPage">
+    <Grid x:Name="reservationGrid"  ColumnSpacing="10" RowSpacing="20" AutomationId="reservationPage" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="Images/bg.jpg" Aspect="AspectFill" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="7"/>
+        <BoxView x:Name="wrapperBox" Color="SlateGray" Opacity="0.5" Grid.Row="1" Grid.RowSpan="5" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand"/>
+        <Label x:Name="headerLbl" Text="Welcome to Los Pollos Hermanos" FontAttributes="Bold" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#6E1A26"  FontSize="18" Grid.ColumnSpan="5"/>
+
+        <Label x:Name="lblPartySize" Text="Party Size" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gainsboro" FontFamily="Gotham A" FontSize="Small"/>
+        <Picker x:Name="partyPicker" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" TextColor="Gainsboro" VerticalOptions="Center" Margin="0, 0 , 10, 0">
+            <!-- left, top, right , bottom-->
+            <Picker.Items>
+                <x:String>2 People</x:String>
+                <x:String>3 People</x:String>
+                <x:String>4 People</x:String>
+                <x:String>5 People</x:String>
+                <x:String>6 People</x:String>
+                <x:String>7 People</x:String>
+                <x:String>8 People</x:String>
+            </Picker.Items>
+            
+        </Picker>
+        <Label x:Name="lblDate" Text="Date" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gainsboro" FontFamily="Gotham A" FontSize="Small"/>
+        <Picker x:Name="datePicker" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" TextColor="Gainsboro" VerticalOptions="Center" Margin="0, 0 , 10, 0">
+           
+        </Picker>
+        <Label x:Name="lblTime" Text="Choose a time" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="End" TextColor="Gainsboro" FontFamily="Gotham A" FontSize="Small"/>
+        <ScrollView x:Name="scrollView" Orientation="Horizontal" Grid.Row="4" Grid.Column="1"  Grid.ColumnSpan="3" HorizontalOptions="Center" >
+            <StackLayout x:Name="stack" Orientation="Horizontal">
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
