@@ -1,2 +1,12 @@
 # Restaurant-Reservation
-Project for academic course using Xamarin mobile app development platform
+Project for academic course using Xamarin mobile app development platform. Designed to ease the clients of a given restaurant to book a table via this app.
+
+## Built With
+
+* [Xamarin](https://www.xamarin.com/) - Xamarin's cross-platform mobile development software.
+
+## Authors
+
+* **Georgi Iliev** - [GeorgiIliev](https://github.com/GeorgiIliev95)
+* **Stefan Dimitrov** - [StefanDimitrov](https://github.com/StefanDimitrov95)
+
