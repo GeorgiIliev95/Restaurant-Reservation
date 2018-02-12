@@ -7,6 +7,6 @@ Project for academic course using Xamarin mobile app development platform. Desig
 
 ## Authors
 
-* **Georgi Iliev** - [GeorgiIliev](https://github.com/GeorgiIliev95)
-* **Stefan Dimitrov** - [StefanDimitrov](https://github.com/StefanDimitrov95)
+* **[Georgi Iliev](https://github.com/GeorgiIliev95)**
+* **[Stefan Dimitrov](https://github.com/StefanDimitrov95)**
 
