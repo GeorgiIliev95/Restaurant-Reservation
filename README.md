@@ -1,5 +1,5 @@
 # Restaurant-Reservation
-Non-commercial Project for UI/UX academic course using Xamarin mobile app development platform. Designed to ease the clients of a given restaurant to book a table via this app.
+Non-commercial project for UI/UX academic course using Xamarin mobile app development platform. Designed to ease the clients of a given restaurant to book a table via this app.
 
 ## Demo
 
